@@ -103,15 +103,6 @@ flutter run
 
 To run on a specific platform, include the `-d` flag with a device id or use `flutter run -d chrome` for web.
 
-### Make sure assets are declared in `pubspec.yaml`
-
-Under `flutter:` add the assets folder, for example:
-
-```yaml
-flutter:
-  assets:
-    - assets/readme_files/
-```
 
 ---
 

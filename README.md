@@ -34,21 +34,6 @@ Below are example screenshots. Images are scaled for preview (no file paths are 
 
 ---
 
-## Assets
-
-The repository includes the following image files (used above as screenshots):
-
-* `image1.jpg`
-* `image2.jpg`
-* `image3.jpg`
-* `image4.jpg`
-* `image5.jpg`
-* `image6.jpg`
-
-(Place these files under your `assets` folder and list the assets in `pubspec.yaml`.)
-
----
-
 ## Project Structure (high level)
 
 ```

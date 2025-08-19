@@ -10,26 +10,87 @@ A cross-platform Flutter starter app for an exchange-style UI. This repository c
 
 * Flutter multi-platform scaffold (Android, iOS, Web, Linux, macOS, Windows).
 * Demo **fake login** screen for UI/UX testing.
-* Simple project structure to be used as a starting point for building an exchange or finance-related app.
-* Placeholder assets and sample screens (see `assets/` directory).
+* Clear project separation for data, logic, and presentation layers.
+* Placeholder assets and sample screens.
 
 ---
 
 ## Screenshots
 
-Below are example screenshots included with the repository (images are under `assets/readme_files/`):
+Below are example screenshots. Images are scaled for preview (no file paths are shown in the prose).
 
-![Main / Home screen (mockup)](assets/readme_files/image1.jpg)
+<div align="center">
+<img src="assets/readme_files/image1.jpg" alt="Main / Home screen (mockup)" width="420" />
+<img src="assets/readme_files/image2.jpg" alt="Login screen (demo / fake login)" width="420" />
+<br/>
+<img src="assets/readme_files/image3.jpg" alt="Sample list / market view" width="420" />
+<img src="assets/readme_files/image4.jpg" alt="Details / trade mockup" width="420" />
+<br/>
+<img src="assets/readme_files/image5.jpg" alt="Settings / profile mockup" width="420" />
+<img src="assets/readme_files/image6.jpg" alt="Example dialog / modal" width="420" />
+</div>
 
-![Login screen (demo / fake login)](assets/readme_files/image2.jpg)
+*Note:* Images must be committed to the repository for them to render on GitHub.
 
-![Sample list / market view](assets/readme_files/image3.jpg)
+---
 
-![Details / trade mockup](assets/readme_files/image4.jpg)
+## Assets
 
-![Settings / profile mockup](assets/readme_files/image5.jpg)
+The repository includes the following image files (used above as screenshots):
 
-![Example dialog / modal](assets/readme_files/image6.jpg)
+* `image1.jpg`
+* `image2.jpg`
+* `image3.jpg`
+* `image4.jpg`
+* `image5.jpg`
+* `image6.jpg`
+
+(Place these files under your `assets` folder and list the assets in `pubspec.yaml`.)
+
+---
+
+## Project Structure (high level)
+
+```
+Exchange_Bs/
+├─ android/
+├─ ios/
+├─ web/
+├─ linux/
+├─ macos/
+├─ windows/
+├─ lib/
+│  ├─ data/
+│  │  ├─ data_source/     # Data sources (API clients, local DB adapters)
+│  │  ├─ models/          # Data models / entities
+│  │  └─ repository/      # Repository layer (interfaces & implementations)
+│  │
+│  ├─ logic/
+│  │  └─ provider/        # State management (Provider classes)
+│  │
+│  ├─ presentation/
+│  │  ├─ helper/          # UI helper utilities
+│  │  └─ ui/
+│  │     └─ ui_helper/    # Reusable UI components and widgets
+│  │
+│  └─ main.dart           # Application entry point
+│
+├─ assets/
+│  └─ readme_files/       # Screenshots and other bundled images
+├─ test/
+├─ pubspec.yaml
+└─ README.md
+```
+
+### Notes about `lib/`
+
+* `lib/data/data_source/` — place API client code, HTTP adapters, local storage adapters, and any raw data fetching logic here.
+* `lib/data/models/` — data classes and JSON (de)serialization code (e.g., `fromJson` / `toJson`).
+* `lib/data/repository/` — repository interfaces and concrete implementations that the app uses to fetch and persist data.
+* `lib/logic/provider/` — Provider-based state management classes (ChangeNotifiers, Providers, or Riverpod wrappers if used).
+* `lib/presentation/helper/` and `lib/presentation/ui/ui_helper/` — UI helpers, common widgets, theme setup, and small utilities used by screens.
+
+This separation helps keep the codebase maintainable and makes it easier to replace implementations (for example, swap a fake repository with a real API-backed one).
 
 ---
 
@@ -57,40 +118,15 @@ flutter run
 
 To run on a specific platform, include the `-d` flag with a device id or use `flutter run -d chrome` for web.
 
-### Build (examples)
+### Make sure assets are declared in `pubspec.yaml`
 
-```bash
-# build for Android
-flutter build apk
+Under `flutter:` add the assets folder, for example:
 
-# build for web
-flutter build web
-
-# build for macOS (on macOS host)
-flutter build macos
+```yaml
+flutter:
+  assets:
+    - assets/readme_files/
 ```
-
----
-
-## Project Structure (high level)
-
-```
-Exchange_Bs/
-├─ android/
-├─ ios/
-├─ web/
-├─ linux/
-├─ macos/
-├─ windows/
-├─ lib/
-│  └─ main.dart
-├─ assets/
-├─ test/
-├─ pubspec.yaml
-└─ README.md
-```
-
-The `lib/` folder contains the Flutter Dart source. `assets/` holds images and other bundled resources.
 
 ---
 
@@ -99,10 +135,6 @@ The `lib/` folder contains the Flutter Dart source. `assets/` holds images and o
 * This repository is intended as a UI prototype and starting point.
 * The fake login is suitable for showcasing navigation, flows, and UI only.
 * Replace the fake login and mock data with real authentication and secure API calls before using in production.
-
-### Demo credentials (for local/testing only)
-
-Use any non-empty values on the login screen — the demo login does not authenticate against a real backend.
 
 ---
 
@@ -143,4 +175,4 @@ If you have questions or want to collaborate, contact the project owner on Teleg
 
 ---
 
-*Generated README — feel free to ask for edits, tone changes, or to add a LICENSE/Contributing template.*
+*Generated README — tell me if you want a Persian translation, smaller images, different gallery layout, or specific alt text for each image.*

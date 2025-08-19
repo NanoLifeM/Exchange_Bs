@@ -20,14 +20,14 @@ A cross-platform Flutter starter app for an exchange-style UI. This repository c
 Below are example screenshots. Images are scaled for preview (no file paths are shown in the prose).
 
 <div align="center">
-<img src="assets/readme_files/image1.jpg" alt="Main / Home screen (mockup)" width="300" />
-<img src="assets/readme_files/image2.jpg" alt="Login screen (demo / fake login)" width="300" />
+<img src="assets/readme_files/image1.jpg" alt="Main / Home screen (mockup)" width="300" height="700" />
+<img src="assets/readme_files/image2.jpg" alt="Login screen (demo / fake login)" width="300" height="700" />
 <br/>
-<img src="assets/readme_files/image3.jpg" alt="Sample list / market view" width="300" />
-<img src="assets/readme_files/image4.jpg" alt="Details / trade mockup" width="300" />
+<img src="assets/readme_files/image3.jpg" alt="Sample list / market view" width="300" height="700"/>
+<img src="assets/readme_files/image4.jpg" alt="Details / trade mockup" width="300" height="700"/>
 <br/>
-<img src="assets/readme_files/image5.jpg" alt="Settings / profile mockup" width="300" />
-<img src="assets/readme_files/image6.jpg" alt="Example dialog / modal" width="300" />
+<img src="assets/readme_files/image5.jpg" alt="Settings / profile mockup" width="300" height="700"/>
+<img src="assets/readme_files/image6.jpg" alt="Example dialog / modal" width="300" height="700"/>
 </div>
 
 *Note:* Images must be committed to the repository for them to render on GitHub.
